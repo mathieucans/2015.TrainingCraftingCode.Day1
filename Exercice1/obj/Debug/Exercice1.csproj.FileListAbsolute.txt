@@ -1,0 +1,5 @@
+E:\MCS\Formations\15 09 Crafting code\Days1\Exercice1\Exercice1\bin\Debug\Exercice1.dll
+E:\MCS\Formations\15 09 Crafting code\Days1\Exercice1\Exercice1\bin\Debug\Exercice1.pdb
+E:\MCS\Formations\15 09 Crafting code\Days1\Exercice1\Exercice1\obj\Debug\Exercice1.csprojResolveAssemblyReference.cache
+E:\MCS\Formations\15 09 Crafting code\Days1\Exercice1\Exercice1\obj\Debug\Exercice1.dll
+E:\MCS\Formations\15 09 Crafting code\Days1\Exercice1\Exercice1\obj\Debug\Exercice1.pdb
