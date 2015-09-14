@@ -75,6 +75,7 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="EmptyException.cs" />
     <Compile Include="Stack.cs" />
     <Compile Include="StackTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

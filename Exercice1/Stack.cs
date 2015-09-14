@@ -1,20 +1,24 @@
 using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Exercice1
 {
 	public class Stack
 	{
-		private object _last;
+		private List<object> _stacks = new List<object>();
 
 		internal void Push(object lastpushed)
 		{
-			_last = lastpushed;
+			_stacks.Add(lastpushed);
 		}
 
 		internal object Pop()
 		{
-			if (_last == null) throw new Exception();
-			return _last;;
+			if (_stacks.Count == 0) throw new EmptyException();
+			var result = _stacks.Last();
+			_stacks.Remove(result);
+			return result;
 		}
 	}
 }
