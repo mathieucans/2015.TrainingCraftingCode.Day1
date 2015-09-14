@@ -6,7 +6,7 @@ namespace Exercice1
 {
 	public class Stack
 	{
-		private List<object> _stacks = new List<object>();
+		private readonly List<object> _stacks = new List<object>();
 
 		internal void Push(object lastpushed)
 		{
