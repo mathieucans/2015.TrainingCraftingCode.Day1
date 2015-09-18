@@ -21,7 +21,7 @@ namespace Exercice4
 		{
 			if (!_userService.IsValid(user))
 			{
-				throw new Exception();
+				throw new InvalidUserException();
 			}
 			_gatewayService.sendPayement(paymentDetails);
 		}

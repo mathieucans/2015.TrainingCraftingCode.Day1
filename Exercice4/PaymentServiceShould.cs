@@ -17,17 +17,26 @@ namespace Exercice4
 			_userService = A.Fake<IUSerService>();
 			_gatewayService = A.Fake<IGatewayService>();
 			_paymentService = new PaymentService(_userService, _gatewayService);
+			
 		}
 
 		[TestMethod]
-		[ExpectedException(typeof(Exception))]
 		public void ThrowAnExceptionIfUserIsNotValid()
 		{
 			var user = GivenUser(false);
-
-			// WHEN
-			_paymentService.processPayment(user, new PaymentDetails());
+			try
+			{
+				// WHEN
+				_paymentService.processPayment(user, PAIMENT_DETAILS);
+				Assert.Fail("No exception sent");
+			}
+			catch (InvalidUserException e)
+			{
+				A.CallTo(() => _userService.IsValid(user)).MustHaveHappened(Repeated.Exactly.Once);
+			}
 		}
+
+		public static PaymentDetails PAIMENT_DETAILS { get; private set; }
 
 		[TestMethod]
 		public void SendPayementToTheGateway()
@@ -50,5 +59,9 @@ namespace Exercice4
 		}
 
 
+	}
+
+	public class InvalidUserException : Exception
+	{
 	}
 }
